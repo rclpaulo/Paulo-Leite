@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Moderno - Paulo Leite</title>
+
+  <!-- Ícones FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fundo animado -->
+  <div class="background"></div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container header-content">
+      <img src="imagens/eu.jpg" alt="minha foto" class="perfil animate fade-in">
+      <h1 class="animate fade-in">Paulo Leite</h1>
+      <p class="animate fade-in">Mestre de Cabotagem/Comandante</p>
+
+      <div class="social animate fade-in">
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <a href="curriculo.pdf" class="btn animate fade-in" download>Baixar Currículo</a>
+    </div>
+  </header>
+
+  <!-- Sobre -->
+  <section id="sobre" class="animate slide-up">
+    <div class="container card">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou Paulo, 06 anos atuando como comandante de rebocador portuário na Baia de São Marcos, auxiliando a praticagem na atracação/desatracação de navios no Porto do Itaqui, Alumar e Vale. E em fainas de assistência, reboque e resgate de navios. Tendo atuado como marinheiro em viagens por por toda a costa do Brasil, na Bacia de Campos e Santos e com experiência em AHTS, LH e PSV no apoio marítimo offshore. Depois de acumular experiência como marinheiro, assumi o comando de rebocador portuário na Baia de São Marcos, onde atuo até hoje.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experiência -->
+  <section id="experiencia" class="animate slide-up">
+    <div class="container card">
+      <h2>Experiência</h2>
+      <ul>
+        <li>MCB/CMTE Internacional Marítima contrato Camorim São Luís-MA de 2017 aos dias atuais</li>
+        <li>Marinheiro de convés na Camorim Serviços Marítimos Rio de Janeiro-RJ de 2010 a 2017</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades" class="animate slide-up">
+    <div class="container card">
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <span>FAINAS DE REBOQUE</span>
+        <span>ATRACAÇÃO E DESATRACAÇÃO DE NAVIOS</span>
+        <span>Liderança</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="animate slide-up">
+    <div class="container card">
+      <h2>Contato</h2>
+      <p>Email: rclpaulo@hotmail.com</p>
+      <p>Telefone: (98) 98855-0659</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="animate fade-in">
+    <p>&copy; 2025 Paulo Leite</p>
+  </footer>
+
+  <!-- Script animações -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
